@@ -403,7 +403,7 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
   <div>
     <h1>Rodrigo Pereira da Costa</h1>
     <div class="role"><svg class="i"><use href="#i-db"/></svg><span>Data Engineer <span style="color:var(--muted);font-weight:400">· Mid-level · Banking</span></span></div>
-    <div class="role" style="font-size:15px;color:var(--muted);margin-top:2px"><svg class="i"><use href="#i-terminal"/></svg><span class="mono" id="typed">Python</span><span class="cursor" aria-hidden="true"></span></div>
+    <div class="role" style="font-size:15px;color:var(--muted);margin-top:2px;min-height:24px"><svg class="i"><use href="#i-terminal"/></svg><span class="mono" id="typed">Python</span><span class="cursor" aria-hidden="true"></span></div>
     <div class="meta">
       <span class="badge" style="color:var(--accent-ink)"><svg class="i" style="color:var(--accent-ink)"><use href="#i-check"/></svg>Open to remote roles</span>
       <span><svg class="i"><use href="#i-pin"/></svg>São Paulo, Brazil · UTC−3</span>
@@ -738,7 +738,7 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
       var word = words[w];
       if (del) { c--; if (c <= 0) { del = false; w = (w + 1) % words.length; } }
       else { c++; if (c >= words[w].length + 12) del = true; }
-      typed.textContent = words[w].slice(0, Math.max(0, Math.min(c, words[w].length)));
+      typed.textContent = words[w].slice(0, Math.max(0, Math.min(c, words[w].length))) || '\u200b'; // caractere invisível: a linha não perde altura quando o texto some
     }, 90);
   })();
 
