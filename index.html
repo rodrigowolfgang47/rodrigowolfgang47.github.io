@@ -63,7 +63,7 @@
       "occupationLocation": { "@type": "City", "name": "São Paulo" },
       "skills": "Python, PySpark, SQL, Hive, Databricks, Azure, Kedro, Git, Jenkins, Control-M, ETL, Big Data"
     },
-    "knowsAbout": ["Engenharia de Dados", "Data Engineering", "Python", "PySpark", "Apache Spark", "SQL", "Hive", "Databricks", "Microsoft Azure", "Kedro", "ETL", "Big Data", "Governança de Dados", "Jenkins", "Git", "JavaScript", "PHP", "Laravel"],
+    "knowsAbout": ["Engenharia de Dados", "Data Engineering", "Python", "PySpark", "Apache Spark", "SQL", "Hive", "Databricks", "Microsoft Azure", "Kedro", "ETL", "Big Data", "Governança de Dados", "Arquitetura Medalhão", "SAS", "Migração SAS para Azure", "Jenkins", "GitHub Actions", "CI/CD", "Control-M", "Devin", "Git", "JavaScript", "PHP", "Laravel"],
     "knowsLanguage": [{ "@type": "Language", "name": "Português" }, { "@type": "Language", "name": "Inglês" }],
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "Universidade Estácio" },
@@ -210,6 +210,9 @@ section{display:flex;flex-direction:column;gap:20px;scroll-margin-top:72px}
 .job li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:14.5px}
 .job li svg{width:16px;height:16px;margin-top:4px;color:var(--accent-text)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.proj-list{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.proj-list li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:14.5px}
+.proj-list li svg{width:16px;height:16px;margin-top:4px;color:var(--accent-text)}
 .tag{font-family:var(--f-mono);font-size:12px;padding:3px 9px;border-radius:6px;border:1px solid var(--line);background:var(--paper-2);color:var(--fg)}
 
 /* Competências */
@@ -362,7 +365,7 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
   <div class="top-in">
     <a class="brand" href="#inicio"><b>RC</b> Rodrigo Costa</a>
     <nav class="nav" aria-label="Seções">
-      <a href="#sobre">Sobre</a><a href="#perfil">Perfil</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+      <a href="#sobre">Sobre</a><a href="#perfil">Perfil</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
     </nav>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav">
       <svg class="i ic-open"><use href="#i-menu"/></svg><svg class="i ic-close"><use href="#i-x"/></svg>
@@ -376,6 +379,7 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
     <a href="#sobre"><svg class="i"><use href="#i-book"/></svg>Sobre</a>
     <a href="#perfil"><svg class="i"><use href="#i-target"/></svg>Perfil em dados</a>
     <a href="#experiencia"><svg class="i"><use href="#i-briefcase"/></svg>Experiência</a>
+    <a href="#projetos"><svg class="i"><use href="#i-award"/></svg>Projetos entregues</a>
     <a href="#competencias"><svg class="i"><use href="#i-zap"/></svg>Competências</a>
     <a href="#formacao"><svg class="i"><use href="#i-cap"/></svg>Formação</a>
     <a href="#contato"><svg class="i"><use href="#i-send"/></svg>Contato</a>
@@ -409,19 +413,20 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
 <div class="stats" aria-label="Resumo em números">
   <div class="stat"><div class="ico"><svg class="i"><use href="#i-clock"/></svg></div><div class="n" data-to="8">8+</div><div class="t">anos em tecnologia</div></div>
   <div class="stat"><div class="ico"><svg class="i"><use href="#i-db"/></svg></div><div class="n" data-to="3">3+</div><div class="t">anos em Engenharia de Dados</div></div>
-  <div class="stat"><div class="ico"><svg class="i"><use href="#i-bank"/></svg></div><div class="n">Banco</div><div class="t">time de Riscos · Santander</div></div>
+  <div class="stat"><div class="ico"><svg class="i"><use href="#i-bank"/></svg></div><div class="n">Banco</div><div class="t">F1rst · Santander</div></div>
   <div class="stat"><div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div><div class="n">Azure</div><div class="t">Databricks · PySpark</div></div>
 </div>
 
 <section id="sobre" aria-labelledby="h-sobre">
   <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-user"/></svg></div><h2 id="h-sobre">Sobre mim</h2></div>
   <div class="card about">
-    <p>Engenheiro de Dados Pleno com mais de 8 anos em tecnologia, sendo os últimos 3+ anos dedicados a dados no setor bancário, no time de Riscos da F1rst/Santander. Trabalho com migração de sistemas e pipelines para a nuvem Azure, desenvolvimento em PySpark e Databricks, e governança de dados.</p>
+    <p>Engenheiro de Dados Pleno com mais de 8 anos em tecnologia, sendo os últimos 3+ anos dedicados a dados no setor bancário, na F1rst/Santander. Atuei na linha de frente da migração de um sistema legado em SAS para a Azure no projeto PDA, entrega que me rendeu uma promoção.</p>
+    <p>Hoje cuido da sustentação e evolução de pipelines em produção com PySpark e Databricks, com CI/CD em Jenkins e GitHub Actions e uso de IA no desenvolvimento (Devin).</p>
     <p>Comecei em desenvolvimento web e e-commerce, o que me dá uma visão de ponta a ponta: do dado bruto até o produto que o usuário final vê.</p>
     <div class="goal"><svg class="i"><use href="#i-target"/></svg><span><b>Objetivo:</b> crescer para posições de maior responsabilidade em Engenharia de Dados, como Engenheiro de Dados Sênior.</span></div>
   </div>
   <div class="highlights">
-    <div class="card hl"><div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div><div><b>Migração para cloud</b><span>Pipelines legados levados para Azure e Databricks.</span></div></div>
+    <div class="card hl"><div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div><div><b>Migração para cloud</b><span>Legado em SAS levado para Azure e Databricks.</span></div></div>
     <div class="card hl"><div class="ico"><svg class="i"><use href="#i-flow"/></svg></div><div><b>Pipelines de dados</b><span>Construção, manutenção e otimização com PySpark, Kedro e SQL.</span></div></div>
     <div class="card hl"><div class="ico"><svg class="i"><use href="#i-shield"/></svg></div><div><b>Governança</b><span>Qualidade, escalabilidade e rastreabilidade dos dados.</span></div></div>
   </div>
@@ -449,17 +454,22 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
       <div class="dot"><svg class="i"><use href="#i-db"/></svg></div>
       <div class="card">
         <div class="job-h">
-          <div><h3>Engenheiro de Dados Pleno</h3><div class="co"><svg class="i"><use href="#i-building"/></svg>F1rst / Santander · Engenharia de Dados em Riscos</div></div>
+          <div><h3>Engenheiro de Dados Pleno</h3><div class="co"><svg class="i"><use href="#i-building"/></svg>F1rst / Santander · Engenharia de Dados</div></div>
           <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="badge">Atual</span><span class="when"><svg class="i"><use href="#i-cal"/></svg>mar 2023 – atual</span></div>
         </div>
-        <ul>
-          <li><svg class="i"><use href="#i-cloud"/></svg><span>Migro sistemas e pipelines de dados para a nuvem Azure, com processamento em Databricks.</span></li>
-          <li><svg class="i"><use href="#i-flow"/></svg><span>Desenvolvo, mantenho e otimizo pipelines em PySpark, Kedro, Hive e SQL.</span></li>
-          <li><svg class="i"><use href="#i-terminal"/></svg><span>Automatizo processos e integrações em Python, com versionamento em Git.</span></li>
-          <li><svg class="i"><use href="#i-zap"/></svg><span>Orquestro deploys com Jenkins e agendo e monitoro rotinas com Control-M.</span></li>
-          <li><svg class="i"><use href="#i-shield"/></svg><span>Participo de projetos de transformação digital, garantindo qualidade, escalabilidade e governança dos dados.</span></li>
+        <p class="label" style="margin-top:14px">Sustentação e evolução de projetos · 2025 – atual</p>
+        <ul style="margin-top:8px">
+          <li><svg class="i"><use href="#i-shield"/></svg><span>Garanto a estabilidade de pipelines em produção, com prevenção e correção de vulnerabilidades e atualização de versões de bibliotecas e ambientes.</span></li>
+          <li><svg class="i"><use href="#i-flow"/></svg><span>Desenvolvo novas funcionalidades em projetos existentes com Python, PySpark e SQL no Azure Databricks.</span></li>
+          <li><svg class="i"><use href="#i-zap"/></svg><span>Automatizo build e deploy com Jenkins e GitHub Actions (CI/CD) e uso o Devin, agente de IA, para acelerar o desenvolvimento.</span></li>
         </ul>
-        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">SQL</span><span class="tag">Hive</span><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Kedro</span><span class="tag">Git</span><span class="tag">Jenkins</span><span class="tag">Control-M</span></div>
+        <p class="label" style="margin-top:14px">Migração para cloud · 2023 – 2024</p>
+        <ul style="margin-top:8px">
+          <li><svg class="i"><use href="#i-cloud"/></svg><span>Atuei na linha de frente da migração do legado em SAS para a Azure no projeto PDA (veja em Projetos entregues).</span></li>
+          <li><svg class="i"><use href="#i-terminal"/></svg><span>Desenvolvi pipelines ETL em PySpark, SQL, Hive e Kedro, com calendarização no Control-M.</span></li>
+          <li><svg class="i"><use href="#i-award"/></svg><span>Promovido após a entrega do projeto no fim de 2024.</span></li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">SQL</span><span class="tag">SAS</span><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Hive</span><span class="tag">Kedro</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Control-M</span><span class="tag">Devin</span><span class="tag">Gluon</span></div>
       </div>
     </article>
 
@@ -498,6 +508,25 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
   </div>
 </section>
 
+<section id="projetos" aria-labelledby="h-proj">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-award"/></svg></div><h2 id="h-proj">Projetos entregues</h2></div>
+  <div class="card" style="border-left:4px solid var(--accent)">
+    <div class="job-h">
+      <div><h3 style="font-size:19px;font-weight:600">PDA – Plano de Ativos</h3><div class="co" style="display:flex;align-items:center;gap:6px;color:var(--muted);font-size:14.5px;margin-top:2px"><svg class="i" style="width:15px;height:15px"><use href="#i-building"/></svg>F1rst / Santander · Segmento Pessoa Jurídica (PJ)</div></div>
+      <span class="when"><svg class="i"><use href="#i-cal"/></svg>entregue no fim de 2024</span>
+    </div>
+    <p style="margin-top:12px">Solução que facilita o acesso de clientes PJ a produtos do banco, como crédito e antecipação da liquidação de boletos.</p>
+    <ul class="proj-list">
+      <li><svg class="i"><use href="#i-cloud"/></svg><span>Migração do processamento legado em SAS para a Microsoft Azure, com os jobs executados no Azure Databricks.</span></li>
+      <li><svg class="i"><use href="#i-db"/></svg><span>Ingestão de dados para a cloud em tabelas da camada bronze (arquitetura medalhão).</span></li>
+      <li><svg class="i"><use href="#i-terminal"/></svg><span>Desenvolvimento de scripts e soluções em PySpark, na linha de frente do projeto.</span></li>
+      <li><svg class="i"><use href="#i-clock"/></svg><span>Orquestração e calendarização dos jobs via Control-M.</span></li>
+    </ul>
+    <div class="goal" style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--accent-soft);font-size:14.5px"><svg class="i" style="color:var(--accent-text);margin-top:2px"><use href="#i-award"/></svg><span><b>Resultado:</b> projeto entregue em produção e promoção pela atuação no desenvolvimento.</span></div>
+    <div class="tags"><span class="tag">SAS</span><span class="tag">Azure</span><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">Control-M</span><span class="tag">Camada bronze</span></div>
+  </div>
+</section>
+
 <section id="competencias" aria-labelledby="h-sk">
   <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-zap"/></svg></div><h2 id="h-sk">Competências</h2></div>
   <div class="skills">
@@ -507,7 +536,7 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
     </div>
     <div class="card sk">
       <h3><span class="ico"><svg class="i"><use href="#i-cloud"/></svg></span>Cloud e DevOps</h3>
-      <div class="tags" style="margin-top:0"><span class="tag main">Azure</span><span class="tag main">Jenkins</span><span class="tag main">Git / GitHub</span><span class="tag">Control-M</span><span class="tag">Consumo de microsserviços</span></div>
+      <div class="tags" style="margin-top:0"><span class="tag main">Azure</span><span class="tag main">Jenkins</span><span class="tag main">GitHub Actions</span><span class="tag main">Git / GitHub</span><span class="tag">Control-M</span><span class="tag">Devin (IA)</span><span class="tag">Gluon</span><span class="tag">Migração SAS → Azure</span><span class="tag">Consumo de microsserviços</span></div>
     </div>
     <div class="card sk">
       <h3><span class="ico"><svg class="i"><use href="#i-code"/></svg></span>Desenvolvimento web</h3>

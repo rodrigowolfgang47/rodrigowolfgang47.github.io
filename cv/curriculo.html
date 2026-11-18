@@ -13,10 +13,10 @@
    - texto real, na ordem de leitura (as caixas são só moldura; a ordem do HTML é a ordem lida pelo ATS)
    - ligaduras desligadas: evita "Prossional" no lugar de "Profissional" */
 @page{size:A4;margin:12mm 13mm 11mm}
-:root{--ink:#141414;--muted:#5d5d58;--line:#e2e0d8;--soft:#faf9f5;--y:#f5c518;--y-text:#8a6a00;--y-soft:#fdf3c7}
+:root{--ink:#141414;--muted:#4f4f4a;--line:#e2e0d8;--soft:#faf9f5;--y:#f5c518;--y-text:#8a6a00;--y-soft:#fdf3c7}
 *{box-sizing:border-box}
 html,body{margin:0;background:#fff}
-body{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.45;
+body{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.38;
   font-variant-ligatures:none;font-feature-settings:"liga" 0,"clig" 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 h1,h2,h3{margin:0;font-family:"Space Grotesk","Segoe UI",Arial,sans-serif;font-variant-ligatures:none}
 p{margin:0}
@@ -49,7 +49,7 @@ h1{font-size:22pt;font-weight:700;letter-spacing:-.015em;line-height:1.05}
 .stat span{font-size:7.8pt;color:var(--muted);line-height:1.25}
 
 /* Seções */
-section{margin-top:13px}
+section{margin-top:11px}
 h2{display:flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;break-after:avoid}
 h2 .tile{width:22px;height:22px;border-radius:6px}
 h2 .tile .i{width:12px;height:12px}
@@ -59,8 +59,8 @@ section:not(:has(.job)){break-inside:avoid}
 .summary{border-left:3px solid var(--y);background:var(--soft)}
 
 /* Competências em caixas com etiquetas */
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.sk{border:1px solid var(--line);border-radius:9px;padding:8px 10px;break-inside:avoid}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:9px 22px}
+.sk{break-inside:avoid}
 .sk h3{display:flex;align-items:center;gap:7px;font-size:9.4pt;font-weight:600;margin-bottom:6px}
 .sk h3 .tile{width:20px;height:20px;border-radius:5px}
 .sk h3 .tile .i{width:11px;height:11px}
@@ -69,8 +69,26 @@ section:not(:has(.job)){break-inside:avoid}
 .tag.main{background:var(--y-soft);border-color:#f0dc8a;color:#5a4500;font-weight:500}
 
 /* Experiência em cartões */
-.job{border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-top:8px;break-inside:avoid;display:grid;grid-template-columns:auto 1fr;gap:0 11px}
-.job:first-of-type{margin-top:0;border-color:#e9d58a;box-shadow:inset 3px 0 0 var(--y)}
+/* Caixa só nos trechos importantes (emprego atual e projeto entregue); o resto fica sem moldura */
+.job{padding:10px 0 0;margin-top:10px;border-top:1px solid var(--line);break-inside:avoid;display:grid;grid-template-columns:auto 1fr;gap:0 11px}
+.job.featured,.proj{margin-top:0;border:1px solid #e9d58a;border-radius:9px;padding:10px 12px;box-shadow:inset 3px 0 0 var(--y)}
+.featured + .job{border-top:0;padding-top:4px}
+.job.featured{break-inside:auto}
+.job.featured ul,.job.featured .job-h,.job.featured .co,.job.featured .sub{break-inside:avoid}
+.sub{break-after:avoid}
+.sub{font-weight:600;font-size:9.2pt;margin:6px 0 1px}
+.sub span{color:var(--muted);font-weight:500}
+.proj{display:grid;grid-template-columns:auto 1fr;gap:0 11px;break-inside:avoid}
+.proj > .tile{width:28px;height:28px;border-radius:7px}
+.proj > .tile .i{width:15px;height:15px}
+.proj h3{font-size:10.6pt;font-weight:600}
+.proj .desc{margin:2px 0 4px}
+.proj ul{list-style:square;padding-left:14px}
+.proj li{margin-top:1px;padding-left:2px}
+.proj li::marker{color:#e0b000;font-size:1.15em}
+.proj .tags{margin-top:7px}
+.result{display:flex;gap:7px;align-items:flex-start;margin-top:7px;padding:6px 9px;border-radius:7px;background:var(--y-soft);font-size:9pt}
+.result .i{width:13px;height:13px;color:var(--y-text);margin-top:2px}
 .job > .tile{width:28px;height:28px;border-radius:7px}
 .job > .tile .i{width:15px;height:15px}
 .job-h{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
@@ -81,20 +99,21 @@ section:not(:has(.job)){break-inside:avoid}
 .co{display:flex;align-items:center;gap:4px;font-size:8.8pt;color:var(--muted);margin:1px 0 5px}
 .co .i{width:10px;height:10px}
 .job ul{list-style:square;padding-left:14px}
-.job li{margin-top:2px;padding-left:2px}
+.job li{margin-top:1px;padding-left:2px}
 .job li::marker{color:#e0b000;font-size:1.15em}
 .job .tags{margin-top:7px}
 
 /* Formação e cursos */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.item{border:1px solid var(--line);border-radius:9px;padding:8px 10px;display:flex;gap:9px;align-items:flex-start}
+.item{padding:2px 0;display:flex;gap:9px;align-items:flex-start}
 .item .tile{width:24px;height:24px;border-radius:6px}
 .item .tile .i{width:13px;height:13px}
 .item b{display:block;font-weight:600;font-size:9pt;line-height:1.3}
 .item div span{display:block;color:var(--muted);font-size:8.3pt}
 .lang{display:flex;gap:7px}
 .lang .item{flex:1}
+.kw{font-size:8.6pt;color:#33332e;line-height:1.6}
 </style>
 </head>
 <body>
@@ -124,6 +143,8 @@ section:not(:has(.job)){break-inside:avoid}
   <symbol id="cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h2l2.7 12.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 1.9-1.6L22 7H5.1"/></symbol>
   <symbol id="cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
   <symbol id="build" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01"/></symbol>
+  <symbol id="award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+  <symbol id="rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
   <symbol id="tag" viewBox="0 0 24 24"><path d="M12 2H2v10l9.3 9.3a1 1 0 0 0 1.4 0l8.6-8.6a1 1 0 0 0 0-1.4Z"/><circle cx="7" cy="7" r="1.5"/></symbol>
 </svg>
 
@@ -147,13 +168,13 @@ section:not(:has(.job)){break-inside:avoid}
 <div class="stats">
   <div class="stat"><div class="tile"><svg class="i"><use href="#clock"/></svg></div><b>8+</b><span>anos em tecnologia</span></div>
   <div class="stat"><div class="tile"><svg class="i"><use href="#db"/></svg></div><b>3+</b><span>anos em Engenharia de Dados</span></div>
-  <div class="stat"><div class="tile"><svg class="i"><use href="#bank"/></svg></div><b>Banco</b><span>Riscos · Santander</span></div>
+  <div class="stat"><div class="tile"><svg class="i"><use href="#bank"/></svg></div><b>Banco</b><span>F1rst · Santander</span></div>
   <div class="stat"><div class="tile"><svg class="i"><use href="#cloud"/></svg></div><b>Azure</b><span>Databricks · PySpark</span></div>
 </div>
 
 <section>
   <h2><span class="tile"><svg class="i"><use href="#user"/></svg></span>Resumo profissional</h2>
-  <p class="box summary">Engenheiro de Dados Pleno (Data Engineer) com mais de 8 anos em tecnologia e mais de 3 anos em Engenharia de Dados no setor bancário (F1rst / Santander, área de Riscos). Experiência em migração de sistemas e pipelines de dados para a nuvem Microsoft Azure, desenvolvimento de pipelines ETL com Python, PySpark (Apache Spark) e SQL no Azure Databricks, automação de deploys com Jenkins (CI/CD) e governança e qualidade de dados. Base sólida em desenvolvimento web full stack. Busco evoluir para Engenheiro de Dados Sênior.</p>
+  <p class="box summary">Engenheiro de Dados Pleno (Data Engineer) com mais de 8 anos em tecnologia e mais de 3 anos em Engenharia de Dados no setor bancário (F1rst / Santander). Atuei na linha de frente da migração de um sistema legado em SAS para a Microsoft Azure no projeto PDA (segmento PJ), entrega que me rendeu uma promoção. Hoje cuido da sustentação e evolução de pipelines em produção com Python, PySpark e SQL no Azure Databricks, com CI/CD em Jenkins e GitHub Actions, orquestração no Control-M e uso de IA no desenvolvimento (Devin). Busco evoluir para Engenheiro de Dados Sênior.</p>
 </section>
 
 <section>
@@ -162,11 +183,11 @@ section:not(:has(.job)){break-inside:avoid}
     <div class="sk"><h3><span class="tile"><svg class="i"><use href="#flow"/></svg></span>Big Data e processamento</h3>
       <div class="tags"><span class="tag main">Apache Spark (PySpark)</span> <span class="tag main">Databricks</span> <span class="tag main">ETL / ELT</span> <span class="tag">Apache Hive</span> <span class="tag">Kedro</span> <span class="tag">Processamento distribuído</span></div></div>
     <div class="sk"><h3><span class="tile"><svg class="i"><use href="#term"/></svg></span>Linguagens</h3>
-      <div class="tags"><span class="tag main">Python</span> <span class="tag main">PySpark</span> <span class="tag main">SQL</span> <span class="tag">JavaScript</span> <span class="tag">TypeScript</span> <span class="tag">PHP</span> <span class="tag">Java</span></div></div>
-    <div class="sk"><h3><span class="tile"><svg class="i"><use href="#cloud"/></svg></span>Cloud</h3>
-      <div class="tags"><span class="tag main">Microsoft Azure</span> <span class="tag main">Azure Databricks</span> <span class="tag">Migração on-premises para cloud</span></div></div>
-    <div class="sk"><h3><span class="tile"><svg class="i"><use href="#git"/></svg></span>DevOps e orquestração</h3>
-      <div class="tags"><span class="tag main">Jenkins (CI/CD)</span> <span class="tag main">Git</span> <span class="tag">GitHub</span> <span class="tag">Control-M</span></div></div>
+      <div class="tags"><span class="tag main">Python</span> <span class="tag main">PySpark</span> <span class="tag main">SQL</span> <span class="tag">SAS</span> <span class="tag">JavaScript</span> <span class="tag">TypeScript</span> <span class="tag">PHP</span> <span class="tag">Java</span></div></div>
+    <div class="sk"><h3><span class="tile"><svg class="i"><use href="#cloud"/></svg></span>Cloud e migração</h3>
+      <div class="tags"><span class="tag main">Microsoft Azure</span> <span class="tag main">Azure Databricks</span> <span class="tag main">Migração SAS para Azure</span> <span class="tag">Arquitetura medalhão</span> <span class="tag">Ingestão de dados</span></div></div>
+    <div class="sk"><h3><span class="tile"><svg class="i"><use href="#git"/></svg></span>DevOps, orquestração e IA</h3>
+      <div class="tags"><span class="tag main">Jenkins (CI/CD)</span> <span class="tag main">GitHub Actions</span> <span class="tag main">Control-M</span> <span class="tag">Git</span> <span class="tag">GitHub</span> <span class="tag">Devin (IA)</span> <span class="tag">Gluon</span></div></div>
     <div class="sk"><h3><span class="tile"><svg class="i"><use href="#shield"/></svg></span>Dados</h3>
       <div class="tags"><span class="tag main">Governança de dados</span> <span class="tag main">Qualidade de dados</span> <span class="tag">Modelagem de dados</span> <span class="tag">Bancos relacionais</span> <span class="tag">APIs e microsserviços</span></div></div>
     <div class="sk"><h3><span class="tile"><svg class="i"><use href="#code"/></svg></span>Desenvolvimento web</h3>
@@ -177,19 +198,24 @@ section:not(:has(.job)){break-inside:avoid}
 <section>
   <h2><span class="tile"><svg class="i"><use href="#brief"/></svg></span>Experiência profissional</h2>
 
-  <div class="job">
+  <div class="job featured">
     <div class="tile"><svg class="i"><use href="#db"/></svg></div>
     <div>
       <div class="job-h"><h3>Engenheiro de Dados Pleno (Data Engineer)</h3><span class="when"><span class="now">Atual</span><svg class="i"><use href="#cal"/></svg>mar 2023 – atual</span></div>
-      <p class="co"><svg class="i"><use href="#build"/></svg>F1rst / Santander · Engenharia de Dados em Riscos · São Paulo, SP</p>
+      <p class="co"><svg class="i"><use href="#build"/></svg>F1rst / Santander · Engenharia de Dados · São Paulo, SP</p>
+      <p class="sub">Sustentação e evolução de projetos <span>· 2025 – atual</span></p>
       <ul>
-        <li>Migro sistemas e pipelines de dados de ambiente on-premises para a nuvem Microsoft Azure, com processamento no Azure Databricks.</li>
-        <li>Desenvolvo, mantenho e otimizo pipelines de dados (ETL) em Python, PySpark, SQL, Apache Hive e Kedro.</li>
-        <li>Automatizo processos e integrações em Python, com versionamento de código em Git.</li>
-        <li>Orquestro deploys com Jenkins (CI/CD) e agendo e monitoro rotinas batch com Control-M.</li>
-        <li>Atuo em projetos de transformação digital garantindo qualidade, escalabilidade e governança dos dados.</li>
+        <li>Garanto a estabilidade de pipelines de dados em produção, com prevenção e correção de vulnerabilidades e atualização de versões de bibliotecas e ambientes.</li>
+        <li>Desenvolvo novas funcionalidades em projetos existentes com Python, PySpark e SQL no Azure Databricks.</li>
+        <li>Automatizo build e deploy com Jenkins e GitHub Actions (CI/CD) e uso o Devin, agente de IA, para acelerar desenvolvimento e manutenção de código.</li>
       </ul>
-      <div class="tags">Tecnologias: <span class="tag">Python</span> <span class="tag">PySpark</span> <span class="tag">SQL</span> <span class="tag">Hive</span> <span class="tag">Databricks</span> <span class="tag">Azure</span> <span class="tag">Kedro</span> <span class="tag">Git</span> <span class="tag">Jenkins</span> <span class="tag">Control-M</span></div>
+      <p class="sub">Migração para cloud <span>· 2023 – 2024</span></p>
+      <ul>
+        <li>Atuei na linha de frente da migração do legado em SAS para a Microsoft Azure no projeto PDA (detalhes em Projetos entregues).</li>
+        <li>Desenvolvi pipelines ETL em PySpark, SQL, Apache Hive e Kedro, com orquestração e calendarização no Control-M.</li>
+        <li>Promovido após a entrega do projeto no fim de 2024, pela contribuição técnica no desenvolvimento.</li>
+      </ul>
+      <div class="tags">Tecnologias: <span class="tag">Python</span> <span class="tag">PySpark</span> <span class="tag">SQL</span> <span class="tag">SAS</span> <span class="tag">Databricks</span> <span class="tag">Azure</span> <span class="tag">Hive</span> <span class="tag">Kedro</span> <span class="tag">Jenkins</span> <span class="tag">GitHub Actions</span> <span class="tag">Control-M</span> <span class="tag">Devin</span> <span class="tag">Gluon</span></div>
     </div>
   </div>
 
@@ -223,6 +249,26 @@ section:not(:has(.job)){break-inside:avoid}
 </section>
 
 <section>
+  <h2><span class="tile"><svg class="i"><use href="#rocket"/></svg></span>Projetos entregues</h2>
+  <div class="proj">
+    <div class="tile"><svg class="i"><use href="#rocket"/></svg></div>
+    <div>
+      <div class="job-h"><h3>PDA – Plano de Ativos</h3><span class="when"><svg class="i"><use href="#cal"/></svg>entregue no fim de 2024</span></div>
+      <p class="co"><svg class="i"><use href="#build"/></svg>F1rst / Santander · Segmento Pessoa Jurídica (PJ)</p>
+      <p class="desc">Solução que facilita o acesso de clientes PJ a produtos do banco, como crédito e antecipação da liquidação de boletos.</p>
+      <ul>
+        <li>Migração do processamento legado em SAS para a Microsoft Azure, com os jobs executados no Azure Databricks.</li>
+        <li>Ingestão de dados para a cloud em tabelas da camada bronze (arquitetura medalhão).</li>
+        <li>Desenvolvimento de scripts e soluções em PySpark, na linha de frente do projeto.</li>
+        <li>Orquestração e calendarização dos jobs via Control-M.</li>
+      </ul>
+      <p class="result"><svg class="i"><use href="#award"/></svg><span><b>Resultado:</b> projeto entregue em produção e promoção pela atuação no desenvolvimento.</span></p>
+      <div class="tags">Tecnologias: <span class="tag">SAS</span> <span class="tag">Azure</span> <span class="tag">Databricks</span> <span class="tag">PySpark</span> <span class="tag">Control-M</span> <span class="tag">Camada bronze</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
   <h2><span class="tile"><svg class="i"><use href="#cap"/></svg></span>Formação acadêmica</h2>
   <div class="grid2">
     <div class="item"><span class="tile"><svg class="i"><use href="#cap"/></svg></span><div><b>Tecnólogo em Análise e Desenvolvimento de Sistemas</b><span>Universidade Estácio · 2022 – 2024 · concluído</span></div></div>
@@ -244,22 +290,12 @@ section:not(:has(.job)){break-inside:avoid}
 
 <section>
   <h2><span class="tile"><svg class="i"><use href="#globe"/></svg></span>Idiomas</h2>
-  <div class="lang">
-    <div class="item"><span class="tile"><svg class="i"><use href="#globe"/></svg></span><div><b>Português</b><span>Nativo</span></div></div>
-    <div class="item"><span class="tile"><svg class="i"><use href="#globe"/></svg></span><div><b>Inglês</b><span>Intermediário · Open English, 2022</span></div></div>
-  </div>
+  <p><b>Português:</b> nativo &nbsp;·&nbsp; <b>Inglês:</b> intermediário (Open English, 2022)</p>
 </section>
 
 <section>
   <h2><span class="tile"><svg class="i"><use href="#tag"/></svg></span>Palavras-chave</h2>
-  <div class="tags">
-    <span class="tag main">Engenharia de Dados</span> <span class="tag main">Data Engineering</span> <span class="tag main">Data Engineer</span> <span class="tag main">Engenheiro de Dados</span>
-    <span class="tag">Python</span> <span class="tag">PySpark</span> <span class="tag">Apache Spark</span> <span class="tag">SQL</span> <span class="tag">Databricks</span> <span class="tag">Azure Databricks</span>
-    <span class="tag">Microsoft Azure</span> <span class="tag">Cloud</span> <span class="tag">Migração para cloud</span> <span class="tag">Big Data</span> <span class="tag">ETL</span> <span class="tag">ELT</span>
-    <span class="tag">Pipeline de dados</span> <span class="tag">Data Pipeline</span> <span class="tag">Apache Hive</span> <span class="tag">Kedro</span> <span class="tag">Jenkins</span> <span class="tag">CI/CD</span>
-    <span class="tag">Git</span> <span class="tag">GitHub</span> <span class="tag">Control-M</span> <span class="tag">Governança de dados</span> <span class="tag">Qualidade de dados</span>
-    <span class="tag">Modelagem de dados</span> <span class="tag">Setor financeiro</span> <span class="tag">Banco</span> <span class="tag">Riscos</span>
-  </div>
+  <p class="kw">Engenharia de Dados · Data Engineering · Data Engineer · Engenheiro de Dados · Python · PySpark · Apache Spark · SQL · Databricks · Azure Databricks · Microsoft Azure · Cloud · Migração para cloud · Big Data · ETL · ELT · Pipeline de dados · Data Pipeline · Apache Hive · Kedro · Jenkins · CI/CD · Git · GitHub · Control-M · Governança de dados · Qualidade de dados · Modelagem de dados · SAS · Migração SAS para Azure · Arquitetura medalhão · Camada bronze · Ingestão de dados · GitHub Actions · Devin · IA generativa · Sustentação · Gestão de vulnerabilidades · Setor financeiro · Banco · Pessoa Jurídica (PJ) · Crédito</p>
 </section>
 
 </body>
