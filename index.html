@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  SEO: o endereço do site aparece abaixo como https://rodrigowolfgang47.github.io/ (GitHub Pages).
+  Se publicar em outro endereço, troque em todos os lugares deste arquivo, no robots.txt e no sitemap.xml.
+-->
+<title>Rodrigo Costa | Engenheiro de Dados (Data Engineer) · Python, PySpark, Azure Databricks</title>
+<meta name="description" content="Rodrigo Costa, Engenheiro de Dados Pleno em São Paulo. 3+ anos em dados no Santander: pipelines PySpark, SQL, Azure Databricks e migração para cloud.">
+<meta name="keywords" content="Engenheiro de Dados, Data Engineer, Engenharia de Dados, Python, PySpark, Spark, SQL, Databricks, Azure, Hive, Kedro, ETL, Big Data, Cloud, Jenkins, São Paulo">
+<meta name="author" content="Rodrigo Pereira da Costa">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="canonical" href="https://rodrigowolfgang47.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f5c518'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23111'%3ERC%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="og-image.png">
+
+<!-- Compartilhamento (LinkedIn, WhatsApp, Facebook, X) -->
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rodrigo Costa · Currículo">
+<meta property="og:title" content="Rodrigo Costa | Engenheiro de Dados">
+<meta property="og:description" content="Pipelines PySpark, SQL e Azure Databricks. 3+ anos em Engenharia de Dados no setor bancário. Aberto a oportunidades.">
+<meta property="og:url" content="https://rodrigowolfgang47.github.io/">
+<meta property="og:image" content="https://rodrigowolfgang47.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rodrigo Costa, Engenheiro de Dados: Python, PySpark, SQL, Azure Databricks">
+<meta property="profile:first_name" content="Rodrigo">
+<meta property="profile:last_name" content="Pereira da Costa">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rodrigo Costa | Engenheiro de Dados">
+<meta name="twitter:description" content="Pipelines PySpark, SQL e Azure Databricks. Aberto a oportunidades.">
+<meta name="twitter:image" content="https://rodrigowolfgang47.github.io/og-image.png">
+
+<!-- Dados estruturados: o Google entende quem é a pessoa, cargo e habilidades -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://rodrigowolfgang47.github.io/",
+  "inLanguage": "pt-BR",
+  "dateModified": "2026-11-18",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://rodrigowolfgang47.github.io/#rodrigo",
+    "name": "Rodrigo Pereira da Costa",
+    "alternateName": "Rodrigo Costa",
+    "jobTitle": "Engenheiro de Dados Pleno",
+    "description": "Engenheiro de Dados com experiência em migração para cloud Azure, pipelines PySpark e governança de dados no setor bancário.",
+    "url": "https://rodrigowolfgang47.github.io/",
+    "image": "https://rodrigowolfgang47.github.io/og-image.png",
+    "email": "mailto:rodrigocosta47@outlook.com",
+    "telephone": "+55-11-94871-9660",
+    "address": { "@type": "PostalAddress", "addressLocality": "Taboão da Serra", "addressRegion": "SP", "addressCountry": "BR" },
+    "worksFor": { "@type": "Organization", "name": "F1rst / Santander" },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Engenheiro de Dados",
+      "alternateName": "Data Engineer",
+      "occupationLocation": { "@type": "City", "name": "São Paulo" },
+      "skills": "Python, PySpark, SQL, Hive, Databricks, Azure, Kedro, Git, Jenkins, Control-M, ETL, Big Data"
+    },
+    "knowsAbout": ["Engenharia de Dados", "Data Engineering", "Python", "PySpark", "Apache Spark", "SQL", "Hive", "Databricks", "Microsoft Azure", "Kedro", "ETL", "Big Data", "Governança de Dados", "Jenkins", "Git", "JavaScript", "PHP", "Laravel"],
+    "knowsLanguage": [{ "@type": "Language", "name": "Português" }, { "@type": "Language", "name": "Inglês" }],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidade Estácio" },
+      { "@type": "CollegeOrUniversity", "name": "Universidade Anhanguera" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidade Estácio" }
+    },
+    "sameAs": ["https://github.com/rodrigowolfgang47"]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>
+  // Tema: escuro por padrão; lembra a escolha do visitante
+  try { var t = localStorage.getItem('tema'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<style>
+/* Layout: mesmo estilo simples da árvore — cartões com borda fina, rótulos em caixa alta.
+   Tema escuro (padrão): preto com amarelo nos ícones e botões. Tema claro: papel claro, blocos pretos com ícone amarelo. */
+:root, :root[data-theme="dark"]{
+  --bg:#0b0b0c; --paper:rgba(21,21,23,.88); --paper-2:rgba(28,28,31,.9);
+  --glow-1:rgba(245,197,24,.09); --glow-2:rgba(124,92,246,.10);
+  --me-fill:#f5c518; --me-stroke:#f5c518; --c-eng:#8b7cf6; --c-sci:#a8d13a; --c-bi:#e0479e; --grid:#34343a; --fg:#f2f2f0; --muted:#a2a29c; --line:#2a2a2e;
+  --accent:#f5c518; --accent-ink:#111111; --accent-text:#f5c518; --accent-soft:rgba(245,197,24,.12);
+  --icon-bg:rgba(245,197,24,.12); --icon-fg:#f5c518;
+  --f-display:"Space Grotesk", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#f6f5f1; --paper:rgba(255,255,255,.92); --paper-2:#fbfaf6;
+  --glow-1:rgba(245,197,24,.18); --glow-2:rgba(124,92,246,.07);
+  --me-fill:#f5c518; --me-stroke:#b38600; --c-eng:#6d5ce0; --c-sci:#6f9400; --c-bi:#c8327f; --grid:#d6d3c8; --fg:#141414; --muted:#5d5d58; --line:#e2e0d8;
+  --accent:#f5c518; --accent-ink:#111111; --accent-text:#7a5d00; --accent-soft:#fdf3c7;
+  --icon-bg:#141414; --icon-fg:#f5c518;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html{background:var(--bg);min-height:100%}
+#space{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+body{margin:0;background:transparent;color:var(--fg);font-family:var(--f-body);font-size:15.5px;line-height:1.6;
+  padding:0 max(16px,env(safe-area-inset-left,0px)) 64px;transition:background .25s,color .25s}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.15;text-wrap:balance}
+p{margin:0}
+a{color:var(--accent-text)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.label{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Barra superior */
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px)))}
+.top-in{max-width:1040px;margin:0 auto;padding:10px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:16px}
+.brand{font-family:var(--f-display);font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px;color:var(--fg);text-decoration:none}
+.brand b{background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:1px 7px;font-size:14px}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+.nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.nav a:hover{color:var(--fg);background:var(--paper)}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;border:1px solid var(--line);
+  background:var(--paper);color:var(--accent-text);cursor:pointer;flex:none}
+.theme-btn:hover{border-color:var(--accent)}
+:root[data-theme="dark"] .ic-sun{display:block} :root[data-theme="dark"] .ic-moon{display:none}
+:root[data-theme="light"] .ic-sun{display:none} :root[data-theme="light"] .ic-moon{display:block}
+
+/* Topo */
+.hero{padding-top:48px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.avatar{width:112px;height:112px;border-radius:20px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;
+  font-family:var(--f-display);font-weight:700;font-size:44px;letter-spacing:-.02em}
+.hero h1{font-size:clamp(30px,5vw,48px);font-weight:700;letter-spacing:-.02em}
+.role{display:flex;align-items:center;gap:8px;font-size:18px;color:var(--fg);margin-top:6px;font-weight:500}
+.role svg{color:var(--accent-text)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;color:var(--muted);font-size:14px}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg{width:16px;height:16px;color:var(--accent-text)}
+.actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14.5px;text-decoration:none;
+  border:1px solid var(--line);background:var(--paper);color:var(--fg);cursor:pointer;font-family:inherit;transition:border-color .15s,transform .15s}
+.btn svg{width:18px;height:18px;color:var(--accent-text)}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary svg{color:var(--accent-ink)}
+
+/* Números */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.stat .ico{width:36px;height:36px;border-radius:8px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center}
+.stat .n{font-family:var(--f-display);font-size:28px;font-weight:700;line-height:1}
+.stat .t{font-size:13.5px;color:var(--muted)}
+
+/* Seções */
+section{display:flex;flex-direction:column;gap:20px;scroll-margin-top:72px}
+.sec-head{display:flex;align-items:center;gap:12px}
+.sec-head .ico{width:40px;height:40px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.sec-head h2{font-size:24px;font-weight:700}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}
+.about p+p{margin-top:10px}
+.about .goal{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--accent-soft);font-size:14.5px}
+.about .goal svg{color:var(--accent-text);margin-top:2px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hl{display:flex;gap:12px;align-items:flex-start}
+.hl .ico{width:36px;height:36px;border-radius:8px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center;flex:none}
+.hl b{display:block;font-size:14.5px}
+.hl span{font-size:13.5px;color:var(--muted)}
+
+/* Experiência */
+.timeline{display:flex;flex-direction:column;gap:16px;position:relative}
+.job{display:grid;grid-template-columns:44px 1fr;gap:16px}
+.job .dot{width:44px;height:44px;border-radius:10px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center;position:relative}
+.job.current .dot{background:var(--accent);color:var(--accent-ink)}
+.job:not(:last-child) .dot::after{content:"";position:absolute;top:52px;left:50%;width:1px;height:calc(100% + 200px);background:var(--line);transform:translateX(-50%);z-index:-1}
+.timeline{overflow:hidden}
+.job-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;align-items:baseline}
+.job h3{font-size:19px;font-weight:600}
+.job .co{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:14.5px;margin-top:2px}
+.job .co svg{width:15px;height:15px}
+.when{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);white-space:nowrap}
+.when svg{width:15px;height:15px;color:var(--accent-text)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
+.job ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.job li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:14.5px}
+.job li svg{width:16px;height:16px;margin-top:4px;color:var(--accent-text)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-family:var(--f-mono);font-size:12px;padding:3px 9px;border-radius:6px;border:1px solid var(--line);background:var(--paper-2);color:var(--fg)}
+
+/* Competências */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.sk h3{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;margin-bottom:12px}
+.sk h3 .ico{width:34px;height:34px;border-radius:8px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center}
+.sk .tag.main{background:var(--accent-soft);border-color:transparent;color:var(--accent-text);font-weight:500}
+:root[data-theme="light"] .sk .tag.main{color:#5a4500}
+.sk .note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+/* Formação e cursos */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.edu{display:flex;gap:14px;align-items:flex-start}
+.edu .ico{width:40px;height:40px;border-radius:10px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center;flex:none}
+.edu h3{font-size:16px;font-weight:600;font-family:var(--f-body)}
+.edu .sub{font-size:14px;color:var(--muted)}
+.edu .when{margin-top:6px}
+.courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.course{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;gap:12px;align-items:flex-start}
+.course .ico{width:32px;height:32px;border-radius:8px;background:var(--icon-bg);color:var(--icon-fg);display:grid;place-items:center;flex:none}
+.course .ico svg{width:17px;height:17px}
+.course b{display:block;font-size:14px;font-weight:600;line-height:1.35}
+.course span{display:block;font-size:13px;color:var(--muted)}
+
+/* Contato */
+.contact{display:flex;flex-direction:column;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);
+  border-left:4px solid var(--accent);border-radius:10px;padding:24px}
+.contact h2{font-size:24px}
+.contact p{color:var(--muted);max-width:60ch}
+footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);padding-top:20px}
+
+/* Gráfico radar */
+.radar-wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.radar-main{display:flex;flex-direction:column;align-items:center;gap:12px}
+.radar-main svg{width:100%;max-width:560px;height:auto;overflow:visible}
+.radar-legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted);justify-content:center}
+.radar-legend span{display:inline-flex;align-items:center;gap:6px}
+.radar-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.roles{display:flex;flex-direction:column;gap:10px}
+.roles .hint{font-size:13.5px;color:var(--muted)}
+.role-btn{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center;text-align:left;font-family:inherit;color:var(--fg);
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;transition:border-color .2s,transform .2s,background .2s}
+.role-btn:hover{transform:translateX(3px);border-color:var(--rc)}
+.role-btn[aria-pressed="true"]{border-color:var(--rc);background:color-mix(in srgb,var(--rc) 12%,var(--paper))}
+.role-btn svg{width:84px;height:84px}
+.role-btn b{display:block;font-size:14.5px}
+.role-btn span{font-size:12.5px;color:var(--muted)}
+.rd-grid{fill:none;stroke:var(--grid);stroke-width:1}
+.rd-label{fill:var(--fg);font-family:var(--f-body);font-size:17px;font-weight:500}
+.rd-series{transform-box:view-box;transform-origin:50% 50%;transform:scale(0);transition:transform 1s cubic-bezier(.2,.9,.25,1.15),opacity .35s}
+.grown .rd-series{transform:scale(1)}
+.rd-series.off{opacity:0;transform:scale(.6)}
+.rd-dot{transition:r .15s}
+.rd-dot:hover{r:6}
+
+/* Animações */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.avatar{position:relative;animation:float 6s ease-in-out infinite;box-shadow:0 0 0 0 rgba(245,197,24,.5)}
+.avatar::after{content:"";position:absolute;inset:-6px;border-radius:24px;border:2px solid var(--accent);opacity:.35;animation:ring 3s ease-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+@keyframes ring{0%{transform:scale(.92);opacity:.5}100%{transform:scale(1.12);opacity:0}}
+.job.current .dot::before{content:"";position:absolute;inset:-5px;border-radius:13px;border:2px solid var(--accent);animation:ring 2.4s ease-out infinite}
+.tag{transition:transform .15s,border-color .15s}
+.tag:hover{transform:translateY(-2px);border-color:var(--accent)}
+.stat,.course,.hl,.sk{transition:border-color .2s,transform .2s}
+.stat:hover,.course:hover,.sk:hover{border-color:var(--accent);transform:translateY(-3px)}
+.stat .ico,.course .ico,.sk h3 .ico{transition:transform .3s}
+.stat:hover .ico,.course:hover .ico,.sk:hover h3 .ico{transform:rotate(-8deg) scale(1.08)}
+.cursor{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .rd-series{transform:scale(1)}
+}
+
+@media (max-width:860px){.radar-wrap{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:1fr}.nav{display:none}}
+@media (max-width:620px){
+  .hero{grid-template-columns:1fr;gap:18px;padding-top:32px}
+  .avatar{width:80px;height:80px;font-size:32px;border-radius:16px}
+  .grid2{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+  .job .dot{display:none}
+  .btn{flex:1 1 auto;justify-content:center}
+}
+
+/* Impressão / PDF: sempre claro, sem botões */
+@media print{
+  :root,:root[data-theme="dark"]{--bg:#fff;--paper:#fff;--paper-2:#fff;--fg:#111;--muted:#555;--line:#ddd;--accent-text:#7a5d00;--icon-bg:#111;--icon-fg:#f5c518;--accent-soft:#fdf3c7}
+  body{font-size:12.5px;padding:0}
+  html{background:#fff}
+  .reveal{opacity:1!important;transform:none!important}
+  .rd-series{transform:scale(1)!important}
+  #space,.roles,.top,.actions,.theme-btn,.contact .btn,footer .print-hide{display:none!important}
+  .wrap{gap:24px}
+  .hero{padding-top:0}
+  .card,.course,.stat,.job,section{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<canvas id="space" aria-hidden="true"></canvas>
+
+<!-- Ícones (traço simples, cor herdada) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7Z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#inicio"><b>RC</b> Rodrigo Costa</a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#sobre">Sobre</a><a href="#perfil">Perfil</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+      <svg class="i ic-sun"><use href="#i-sun"/></svg><svg class="i ic-moon"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap" id="inicio">
+
+<section class="hero" aria-label="Apresentação">
+  <div class="avatar" aria-hidden="true">RC</div>
+  <div>
+    <h1>Rodrigo Pereira da Costa</h1>
+    <div class="role"><svg class="i"><use href="#i-db"/></svg><span>Engenheiro de Dados Pleno <span style="color:var(--muted);font-weight:400">· Data Engineer</span></span></div>
+    <div class="role" style="font-size:15px;color:var(--muted);margin-top:2px"><svg class="i"><use href="#i-terminal"/></svg><span class="mono" id="typed">Python</span><span class="cursor" aria-hidden="true"></span></div>
+    <div class="meta">
+      <span class="badge" style="color:var(--accent-ink)"><svg class="i" style="color:var(--accent-ink)"><use href="#i-check"/></svg>Aberto a oportunidades</span>
+      <span><svg class="i"><use href="#i-pin"/></svg>Taboão da Serra, SP · Grande São Paulo</span>
+      <span><svg class="i"><use href="#i-mail"/></svg>rodrigocosta47@outlook.com</span>
+      <span><svg class="i"><use href="#i-phone"/></svg>(11) 94871-9660</span>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="btn primary" href="mailto:rodrigocosta47@outlook.com"><svg class="i"><use href="#i-send"/></svg>Entrar em contato</a>
+    <!-- TODO: trocar pelo endereço do seu perfil (linkedin.com/in/...) -->
+    <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg>LinkedIn</a>
+    <a class="btn" href="https://github.com/rodrigowolfgang47" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>GitHub</a>
+    <button class="btn" type="button" onclick="window.print()"><svg class="i"><use href="#i-download"/></svg>Baixar PDF</button>
+  </div>
+</section>
+
+<div class="stats" aria-label="Resumo em números">
+  <div class="stat"><div class="ico"><svg class="i"><use href="#i-clock"/></svg></div><div class="n" data-to="8">8+</div><div class="t">anos em tecnologia</div></div>
+  <div class="stat"><div class="ico"><svg class="i"><use href="#i-db"/></svg></div><div class="n" data-to="3">3+</div><div class="t">anos em Engenharia de Dados</div></div>
+  <div class="stat"><div class="ico"><svg class="i"><use href="#i-bank"/></svg></div><div class="n">Banco</div><div class="t">time de Riscos · Santander</div></div>
+  <div class="stat"><div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div><div class="n">Azure</div><div class="t">Databricks · PySpark</div></div>
+</div>
+
+<section id="sobre" aria-labelledby="h-sobre">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-user"/></svg></div><h2 id="h-sobre">Sobre mim</h2></div>
+  <div class="card about">
+    <p>Engenheiro de Dados Pleno com mais de 8 anos em tecnologia, sendo os últimos 3+ anos dedicados a dados no setor bancário, no time de Riscos da F1rst/Santander. Trabalho com migração de sistemas e pipelines para a nuvem Azure, desenvolvimento em PySpark e Databricks, e governança de dados.</p>
+    <p>Comecei em desenvolvimento web e e-commerce, o que me dá uma visão de ponta a ponta: do dado bruto até o produto que o usuário final vê.</p>
+    <div class="goal"><svg class="i"><use href="#i-target"/></svg><span><b>Objetivo:</b> crescer para posições de maior responsabilidade em Engenharia de Dados, como Engenheiro de Dados Sênior.</span></div>
+  </div>
+  <div class="highlights">
+    <div class="card hl"><div class="ico"><svg class="i"><use href="#i-cloud"/></svg></div><div><b>Migração para cloud</b><span>Pipelines legados levados para Azure e Databricks.</span></div></div>
+    <div class="card hl"><div class="ico"><svg class="i"><use href="#i-flow"/></svg></div><div><b>Pipelines de dados</b><span>Construção, manutenção e otimização com PySpark, Kedro e SQL.</span></div></div>
+    <div class="card hl"><div class="ico"><svg class="i"><use href="#i-shield"/></svg></div><div><b>Governança</b><span>Qualidade, escalabilidade e rastreabilidade dos dados.</span></div></div>
+  </div>
+</section>
+
+<section id="perfil" aria-labelledby="h-radar">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-target"/></svg></div><h2 id="h-radar">Perfil em dados</h2></div>
+  <div class="radar-wrap">
+    <div class="card radar-main">
+      <svg id="radar" viewBox="-320 -250 640 500" role="img" aria-label="Gráfico radar com a autoavaliação de Rodrigo em sete áreas de dados"></svg>
+      <div class="radar-legend" id="radarLegend"></div>
+    </div>
+    <div class="roles">
+      <p class="hint">Autoavaliação de 0 a 5. Clique num perfil para comparar com o meu.</p>
+      <div id="roleBtns" class="roles"></div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia" aria-labelledby="h-exp">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-briefcase"/></svg></div><h2 id="h-exp">Experiência profissional</h2></div>
+  <div class="timeline">
+
+    <article class="job current">
+      <div class="dot"><svg class="i"><use href="#i-db"/></svg></div>
+      <div class="card">
+        <div class="job-h">
+          <div><h3>Engenheiro de Dados Pleno</h3><div class="co"><svg class="i"><use href="#i-building"/></svg>F1rst / Santander · Engenharia de Dados em Riscos</div></div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="badge">Atual</span><span class="when"><svg class="i"><use href="#i-cal"/></svg>mar 2023 – atual</span></div>
+        </div>
+        <ul>
+          <li><svg class="i"><use href="#i-cloud"/></svg><span>Migro sistemas e pipelines de dados para a nuvem Azure, com processamento em Databricks.</span></li>
+          <li><svg class="i"><use href="#i-flow"/></svg><span>Desenvolvo, mantenho e otimizo pipelines em PySpark, Kedro, Hive e SQL.</span></li>
+          <li><svg class="i"><use href="#i-terminal"/></svg><span>Automatizo processos e integrações em Python, com versionamento em Git.</span></li>
+          <li><svg class="i"><use href="#i-zap"/></svg><span>Orquestro deploys com Jenkins e agendo e monitoro rotinas com Control-M.</span></li>
+          <li><svg class="i"><use href="#i-shield"/></svg><span>Participo de projetos de transformação digital, garantindo qualidade, escalabilidade e governança dos dados.</span></li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">SQL</span><span class="tag">Hive</span><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Kedro</span><span class="tag">Git</span><span class="tag">Jenkins</span><span class="tag">Control-M</span></div>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="dot"><svg class="i"><use href="#i-code"/></svg></div>
+      <div class="card">
+        <div class="job-h">
+          <div><h3>Desenvolvedor Full Stack</h3><div class="co"><svg class="i"><use href="#i-building"/></svg>YPB · Marketing Digital</div></div>
+          <span class="when"><svg class="i"><use href="#i-cal"/></svg>out 2022 – mar 2023</span>
+        </div>
+        <ul>
+          <li><svg class="i"><use href="#i-code"/></svg><span>Desenvolvi front-end e back-end de projetos de clientes com JavaScript, PHP e Laravel.</span></li>
+          <li><svg class="i"><use href="#i-db"/></svg><span>Criei e mantive bancos de dados SQL.</span></li>
+          <li><svg class="i"><use href="#i-check"/></svg><span>Entreguei projetos no prazo, com versionamento em Git e GitHub.</span></li>
+        </ul>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">SQL</span><span class="tag">Git</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="dot"><svg class="i"><use href="#i-cart"/></svg></div>
+      <div class="card">
+        <div class="job-h">
+          <div><h3>Web Designer Pleno</h3><div class="co"><svg class="i"><use href="#i-building"/></svg>Etna Móveis · E-commerce</div></div>
+          <span class="when"><svg class="i"><use href="#i-cal"/></svg>set 2018 – jul 2021</span>
+        </div>
+        <ul>
+          <li><svg class="i"><use href="#i-cart"/></svg><span>Participei da construção do novo e-commerce, reformulando as páginas de produto e o checkout.</span></li>
+          <li><svg class="i"><use href="#i-zap"/></svg><span>Implementei novas funcionalidades em Java e JavaScript e otimizei a performance da página principal.</span></li>
+          <li><svg class="i"><use href="#i-layout"/></svg><span>Criei landing pages e dei suporte a campanhas digitais.</span></li>
+        </ul>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Java</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Sass</span><span class="tag">Git</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="competencias" aria-labelledby="h-sk">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-zap"/></svg></div><h2 id="h-sk">Competências</h2></div>
+  <div class="skills">
+    <div class="card sk">
+      <h3><span class="ico"><svg class="i"><use href="#i-db"/></svg></span>Dados e Big Data</h3>
+      <div class="tags" style="margin-top:0"><span class="tag main">Python</span><span class="tag main">PySpark</span><span class="tag main">SQL</span><span class="tag main">Databricks</span><span class="tag">Hive</span><span class="tag">Kedro</span><span class="tag">Modelagem de bancos</span></div>
+    </div>
+    <div class="card sk">
+      <h3><span class="ico"><svg class="i"><use href="#i-cloud"/></svg></span>Cloud e DevOps</h3>
+      <div class="tags" style="margin-top:0"><span class="tag main">Azure</span><span class="tag main">Jenkins</span><span class="tag main">Git / GitHub</span><span class="tag">Control-M</span><span class="tag">Consumo de microsserviços</span></div>
+    </div>
+    <div class="card sk">
+      <h3><span class="ico"><svg class="i"><use href="#i-code"/></svg></span>Desenvolvimento web</h3>
+      <div class="tags" style="margin-top:0"><span class="tag main">JavaScript</span><span class="tag">TypeScript</span><span class="tag">PHP / Laravel</span><span class="tag">Java</span><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS / Sass</span></div>
+    </div>
+    <div class="card sk">
+      <h3><span class="ico"><svg class="i"><use href="#i-palette"/></svg></span>Design e produtividade</h3>
+      <div class="tags" style="margin-top:0"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Excel</span><span class="tag">Google Sheets</span></div>
+    </div>
+    <div class="card sk">
+      <h3><span class="ico"><svg class="i"><use href="#i-globe"/></svg></span>Idiomas</h3>
+      <div class="tags" style="margin-top:0"><span class="tag main">Português · nativo</span><span class="tag">Inglês · intermediário</span></div>
+    </div>
+  </div>
+  <p class="label" style="text-transform:none;letter-spacing:0;font-weight:400">Em destaque: as ferramentas que uso no dia a dia.</p>
+</section>
+
+<section id="formacao" aria-labelledby="h-edu">
+  <div class="sec-head"><div class="ico"><svg class="i"><use href="#i-cap"/></svg></div><h2 id="h-edu">Formação acadêmica</h2></div>
+  <div class="grid2">
+    <div class="card edu"><div class="ico"><svg class="i"><use href="#i-cap"/></svg></div><div><h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3><div class="sub">Universidade Estácio</div><span class="when"><svg class="i"><use href="#i-cal"/></svg>2022 – 2024 · concluído</span></div></div>
+    <div class="card edu"><div class="ico"><svg class="i"><use href="#i-book"/></svg></div><div><h3>Bacharelado em Publicidade e Propaganda</h3><div class="sub">Universidade Anhanguera</div><span class="when"><svg class="i"><use href="#i-cal"/></svg>2013 – 2017 · incompleto</span></div></div>
+  </div>
+
+  <h3 class="label" style="margin-top:12px">Cursos complementares</h3>
+  <div class="courses">
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-terminal"/></svg></div><div><b>Formação Python</b><span>Alura · 2020</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-terminal"/></svg></div><div><b>Framework Django</b><span>Udemy · 2020</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-layout"/></svg></div><div><b>Front-end Coding (intensivo)</b><span>Digital House · jun–ago 2020</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-code"/></svg></div><div><b>JavaScript Avançado</b><span>Udemy e Alura · 2020–2022</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-code"/></svg></div><div><b>Laravel (PHP)</b><span>Udemy · 2022</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-zap"/></svg></div><div><b>Next Level Week · Node.js e React</b><span>Rocketseat · 2023</span></div></div>
+    <div class="course"><div class="ico"><svg class="i"><use href="#i-globe"/></svg></div><div><b>Inglês intermediário</b><span>Open English · 2022</span></div></div>
+  </div>
+</section>
+
+<section id="contato" class="contact" aria-labelledby="h-ct">
+  <h2 id="h-ct">Vamos conversar?</h2>
+  <p>Estou aberto a oportunidades de Engenheiro de Dados (Data Engineer) Pleno ou Sênior, presencial, híbrido ou remoto em São Paulo. Respondo por e-mail ou WhatsApp.</p>
+  <div class="actions" style="display:flex">
+    <a class="btn primary" href="mailto:rodrigocosta47@outlook.com"><svg class="i"><use href="#i-mail"/></svg>rodrigocosta47@outlook.com</a>
+    <a class="btn" href="https://wa.me/5511948719660" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>WhatsApp</a>
+    <a class="btn" href="tel:+5511948719660"><svg class="i"><use href="#i-phone"/></svg>(11) 94871-9660</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Rodrigo Pereira da Costa</span>
+  <span class="print-hide">Feito em HTML e CSS · tema escuro/claro no botão do topo</span>
+</footer>
+
+</main>
+
+<script>
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var root = document.documentElement;
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('tema', next); } catch (e) {}
+  });
+
+  var REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- Gráfico radar (edite as notas aqui, de 0 a 5) ---------- */
+  var AXES = ['Estatística', 'SQL e|Banco de Dados', 'Tratamento|de Dados', 'Programação|(Python)', 'Cloud e|Big Data', 'Modelagem|de Dados', 'Visualização|de Dados'];
+  var ME = { name: 'Rodrigo', color: 'var(--me-fill)', stroke: 'var(--me-stroke)', values: [2, 4, 5, 4.5, 4, 3.5, 2.5] };
+  var ROLES = [
+    { key: 'eng', name: 'Engenheiro de Dados', desc: 'Pipelines, cloud e qualidade', color: 'var(--c-eng)', values: [2, 5, 5, 4, 5, 4, 1.5] },
+    { key: 'sci', name: 'Cientista de Dados', desc: 'Estatística e modelos', color: 'var(--c-sci)', values: [5, 3.5, 4, 5, 3, 3, 3] },
+    { key: 'bi',  name: 'Analista de BI', desc: 'Indicadores e dashboards', color: 'var(--c-bi)', values: [2.5, 4.5, 3.5, 2, 2, 4, 5] }
+  ];
+
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function pt(i, v, R) {
+    var a = -Math.PI / 2 + i * 2 * Math.PI / AXES.length;
+    return [Math.cos(a) * R * v / 5, Math.sin(a) * R * v / 5];
+  }
+  function grid(svg, R) {
+    for (var l = 1; l <= 5; l++) {
+      el('polygon', { 'class': 'rd-grid', points: AXES.map(function (_, i) { return pt(i, l, R).join(','); }).join(' ') }, svg);
+    }
+    AXES.forEach(function (_, i) { var p = pt(i, 5, R); el('line', { 'class': 'rd-grid', x1: 0, y1: 0, x2: p[0], y2: p[1] }, svg); });
+  }
+  function series(svg, s, R, dots) {
+    var g = el('g', { 'class': 'rd-series' }, svg);
+    el('polygon', { points: s.values.map(function (v, i) { return pt(i, v, R).join(','); }).join(' '),
+      style: 'fill:' + s.color + ';fill-opacity:.28;stroke:' + (s.stroke || s.color) + ';stroke-width:2.5;stroke-linejoin:round' }, g);
+    if (dots) s.values.forEach(function (v, i) {
+      var p = pt(i, v, R);
+      var c = el('circle', { 'class': 'rd-dot', cx: p[0], cy: p[1], r: 4.5, style: 'fill:' + (s.stroke || s.color) }, g);
+      el('title', {}, c).textContent = s.name + ' · ' + AXES[i].replace('|', ' ') + ': ' + v + '/5';
+    });
+    return g;
+  }
+
+  var big = document.getElementById('radar'), R = 175, overlays = {};
+  grid(big, R);
+  AXES.forEach(function (label, i) {
+    var p = pt(i, 5, R + 30), lines = label.split('|');
+    var anchor = Math.abs(p[0]) < 10 ? 'middle' : (p[0] > 0 ? 'start' : 'end');
+    var t = el('text', { 'class': 'rd-label', x: p[0], y: p[1] - (lines.length - 1) * 8 + 4, 'text-anchor': anchor }, big);
+    lines.forEach(function (ln, j) { var ts = el('tspan', { x: p[0], dy: j ? 20 : 0 }, t); ts.textContent = ln; });
+  });
+  ROLES.forEach(function (r) { overlays[r.key] = series(big, r, R, true); overlays[r.key].classList.add('off'); });
+  series(big, ME, R, true);
+
+  var legend = document.getElementById('radarLegend');
+  function renderLegend() {
+    var items = [ME].concat(ROLES.filter(function (r) { return !overlays[r.key].classList.contains('off'); }));
+    legend.innerHTML = items.map(function (s) { return '<span><i style="background:' + s.color + '"></i>' + s.name + '</span>'; }).join('');
+  }
+  renderLegend();
+
+  var box = document.getElementById('roleBtns');
+  ROLES.forEach(function (r) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'role-btn'; b.setAttribute('aria-pressed', 'false'); b.style.setProperty('--rc', r.color);
+    var mini = el('svg', { viewBox: '-55 -55 110 110', 'aria-hidden': 'true' });
+    grid(mini, 48); series(mini, r, 48, false);
+    b.appendChild(mini);
+    var txt = document.createElement('div');
+    txt.innerHTML = '<b>' + r.name + '</b><span>' + r.desc + '</span>';
+    b.appendChild(txt);
+    b.addEventListener('click', function () {
+      var on = overlays[r.key].classList.toggle('off') === false;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      renderLegend();
+    });
+    box.appendChild(b);
+  });
+
+  /* ---------- Animações ao rolar ---------- */
+  function countUp(n) {
+    var to = +n.dataset.to, t0 = null;
+    function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / 1200); n.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))) + '+'; if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var targets = document.querySelectorAll('.stat, .sec-head, .card, .course, .job');
+  if (!REDUCE && 'IntersectionObserver' in window) {
+    targets.forEach(function (t, i) { t.classList.add('reveal'); t.style.transitionDelay = (i % 4) * 70 + 'ms'; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        var n = e.target.querySelector('[data-to]'); if (n) countUp(n);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(function (t) { io.observe(t); });
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('grown'); rio.unobserve(e.target); } });
+    }, { threshold: 0.3 });
+    rio.observe(big); box.querySelectorAll('svg').forEach(function (s) { rio.observe(s); });
+  } else {
+    big.classList.add('grown'); box.querySelectorAll('svg').forEach(function (s) { s.classList.add('grown'); });
+  }
+
+  /* ---------- Texto digitando ---------- */
+  var words = ['Python', 'PySpark', 'SQL', 'Databricks', 'Azure', 'Kedro', 'Jenkins'], typed = document.getElementById('typed');
+  if (!REDUCE) (function () {
+    var w = 0, c = words[0].length, del = true;
+    setInterval(function () {
+      var word = words[w];
+      if (del) { c--; if (c <= 0) { del = false; w = (w + 1) % words.length; } }
+      else { c++; if (c >= words[w].length + 12) del = true; }
+      typed.textContent = words[w].slice(0, Math.max(0, Math.min(c, words[w].length)));
+    }, 90);
+  })();
+
+  /* ---------- Fundo de espaço (leve: poucas estrelas, pausa com a aba oculta) ---------- */
+  (function () {
+    var cv = document.getElementById('space'), ctx = cv.getContext('2d');
+    var W, H, stars = [], shoot = null, nextShoot = 0, sat = null, nextSat = 2500;
+    function drawSat(s, t, alpha) {
+      ctx.save(); ctx.globalAlpha = alpha; ctx.translate(s.x, s.y); ctx.rotate(s.a); ctx.scale(1.3, 1.3);
+      ctx.fillStyle = '#5b6fa8'; ctx.strokeStyle = '#8ea0d6'; ctx.lineWidth = .6;
+      [-15, 5].forEach(function (px) { // painéis solares
+        ctx.fillRect(px, -3.5, 10, 7); ctx.strokeRect(px, -3.5, 10, 7);
+        ctx.beginPath(); ctx.moveTo(px + 5, -3.5); ctx.lineTo(px + 5, 3.5); ctx.stroke();
+      });
+      ctx.fillStyle = '#d8d8d2'; ctx.fillRect(-4, -4.5, 8, 9);
+      ctx.strokeStyle = '#d8d8d2'; ctx.beginPath(); ctx.moveTo(0, -4.5); ctx.lineTo(0, -9); ctx.stroke();
+      if (t % 1800 < 250) { ctx.fillStyle = '#f5c518'; ctx.beginPath(); ctx.arc(0, -9.5, 1.6, 0, 6.283); ctx.fill(); }
+      ctx.restore();
+    }
+    function resize() {
+      var dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = innerWidth; H = innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.max(60, Math.min(200, Math.round(W * H / 8000)));
+      stars = [];
+      for (var i = 0; i < n; i++) stars.push({ x: Math.random() * W, y: Math.random() * H, z: Math.random() * .8 + .2,
+        r: Math.random() * 1.2 + .3, p: Math.random() * 6.28, s: Math.random() * 1.5 + .5, gold: Math.random() < .12 });
+      var m = Math.max(35, Math.min(85, Math.round(W * H / 15000)));
+      parts = [];
+      for (var j = 0; j < m; j++) parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35,
+        r: Math.random() * 2 + 1.2, gold: Math.random() < .35 });
+    }
+
+    /* Tema claro: rede de partículas (lembra um grafo de dados) que reage ao mouse */
+    var parts = [], mouse = { x: -999, y: -999 }, LINK = 130;
+    addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+    addEventListener('mouseout', function () { mouse.x = mouse.y = -999; });
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      var i, j, p, q, dx, dy, d;
+      for (i = 0; i < parts.length; i++) {
+        p = parts[i];
+        if (!REDUCE) {
+          dx = mouse.x - p.x; dy = mouse.y - p.y; d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 160 && d > 1) { p.x -= dx / d * .6; p.y -= dy / d * .6; } // afastam do cursor
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > W) p.vx *= -1;
+          if (p.y < 0 || p.y > H) p.vy *= -1;
+        }
+        for (j = i + 1; j < parts.length; j++) {
+          q = parts[j]; dx = p.x - q.x; dy = p.y - q.y; d = dx * dx + dy * dy;
+          if (d < LINK * LINK) {
+            ctx.strokeStyle = 'rgba(30,30,30,' + (1 - Math.sqrt(d) / LINK) * .22 + ')'; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+          }
+        }
+        dx = mouse.x - p.x; dy = mouse.y - p.y; d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 200) { // linhas até o cursor
+          ctx.strokeStyle = 'rgba(214,160,0,' + (1 - d / 200) * .55 + ')';
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        }
+      }
+      for (i = 0; i < parts.length; i++) {
+        p = parts[i];
+        ctx.fillStyle = p.gold ? 'rgba(232,178,0,.9)' : 'rgba(30,30,30,.55)';
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+      }
+    }
+
+    function draw(t) {
+      var light = document.documentElement.getAttribute('data-theme') === 'light';
+      if (light) { drawParticles(); if (!REDUCE) requestAnimationFrame(draw); return; }
+      var base = light ? '40,40,40' : '255,255,255', gold = '245,197,24', mul = light ? .35 : 1;
+      ctx.clearRect(0, 0, W, H);
+      var sy = window.scrollY;
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        if (!REDUCE) s.x -= s.z * .06;
+        if (s.x < -2) s.x = W + 2;
+        var y = ((s.y - sy * s.z * .15) % H + H) % H;
+        var a = (REDUCE ? .7 : .45 + .55 * Math.abs(Math.sin(t / 1000 * s.s + s.p))) * s.z * mul;
+        ctx.fillStyle = 'rgba(' + (s.gold ? gold : base) + ',' + a + ')';
+        ctx.beginPath(); ctx.arc(s.x, y, s.r * (s.z + .3), 0, 6.283); ctx.fill();
+      }
+      // Satélite: atravessa a tela devagar de tempos em tempos
+      if (!REDUCE) {
+        if (!sat && t > nextSat) {
+          var dir = Math.random() < .5 ? 1 : -1;
+          sat = { x: dir > 0 ? -30 : W + 30, y: H * (.12 + Math.random() * .5), vx: dir * (.35 + Math.random() * .15), vy: (Math.random() - .5) * .08, a: Math.random() * 6.28 };
+        }
+        if (sat) {
+          sat.x += sat.vx; sat.y += sat.vy; sat.a += .0025;
+          drawSat(sat, t, light ? .5 : .85);
+          if (sat.x < -40 || sat.x > W + 40) { sat = null; nextSat = t + 15000 + Math.random() * 15000; }
+        }
+      }
+      if (!REDUCE) {
+        if (!shoot && t > nextShoot) shoot = { x: Math.random() * W * .8 + W * .2, y: Math.random() * H * .4, vx: -7, vy: 3.2, life: 1 };
+        if (shoot) {
+          var g = ctx.createLinearGradient(shoot.x, shoot.y, shoot.x - shoot.vx * 14, shoot.y - shoot.vy * 14);
+          g.addColorStop(0, 'rgba(' + (light ? '40,40,40' : gold) + ',' + shoot.life * mul + ')'); g.addColorStop(1, 'rgba(' + gold + ',0)');
+          ctx.strokeStyle = g; ctx.lineWidth = 1.6;
+          ctx.beginPath(); ctx.moveTo(shoot.x, shoot.y); ctx.lineTo(shoot.x - shoot.vx * 14, shoot.y - shoot.vy * 14); ctx.stroke();
+          shoot.x += shoot.vx; shoot.y += shoot.vy; shoot.life -= .012;
+          if (shoot.life <= 0 || shoot.x < -100) { shoot = null; nextShoot = t + 4000 + Math.random() * 6000; }
+        }
+        requestAnimationFrame(draw);
+      }
+    }
+    resize();
+    addEventListener('resize', resize);
+    if (REDUCE) { draw(0); addEventListener('scroll', function () { draw(0); }, { passive: true }); document.getElementById('themeBtn').addEventListener('click', function () { draw(0); }); }
+    else requestAnimationFrame(draw);
+  })();
+</script>
+</body>
+</html>
