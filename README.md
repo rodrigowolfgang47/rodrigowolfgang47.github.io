@@ -4,6 +4,7 @@ Site currículo de **Rodrigo Pereira da Costa**, Engenheiro de Dados Pleno (Data
 
 🔗 **Site:** https://rodrigowolfgang47.github.io/
 📄 **Currículo em PDF:** https://rodrigowolfgang47.github.io/Rodrigo-Costa-Engenheiro-de-Dados.pdf
+💼 **LinkedIn:** https://www.linkedin.com/in/rodrigo-costa-86282a12a/
 
 ## Sobre
 

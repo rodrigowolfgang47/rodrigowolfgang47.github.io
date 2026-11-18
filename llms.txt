@@ -15,5 +15,6 @@ Python, PySpark (Apache Spark), SQL, SAS, Databricks, Microsoft Azure, Apache Hi
 
 - [Site do currículo](https://rodrigowolfgang47.github.io/)
 - [Currículo em PDF](https://rodrigowolfgang47.github.io/Rodrigo-Costa-Engenheiro-de-Dados.pdf)
+- [LinkedIn](https://www.linkedin.com/in/rodrigo-costa-86282a12a/)
 - [GitHub](https://github.com/rodrigowolfgang47)
 - Contato: rodrigocosta47@outlook.com · (11) 94871-9660
