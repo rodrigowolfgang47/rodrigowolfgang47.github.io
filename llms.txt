@@ -1,0 +1,19 @@
+# Rodrigo Pereira da Costa — Engenheiro de Dados (Data Engineer)
+
+> Engenheiro de Dados Pleno na F1rst / Santander (São Paulo, Brasil). Mais de 8 anos em tecnologia e mais de 3 anos em Engenharia de Dados no setor bancário. Aberto a oportunidades de Engenheiro de Dados Pleno ou Sênior (presencial, híbrido ou remoto em São Paulo).
+
+## Destaques
+
+- Projeto PDA – Plano de Ativos (segmento PJ, entregue no fim de 2024): migração de um sistema legado em SAS para a Microsoft Azure, com jobs no Azure Databricks, ingestão nas camadas bronze e silver (arquitetura medalhão), desenvolvimento em PySpark e orquestração no Control-M. A entrega resultou em promoção.
+- Sustentação e evolução de pipelines em produção (2025 – atual): prevenção e correção de vulnerabilidades, atualização de versões e novas funcionalidades, com CI/CD em Jenkins e GitHub Actions e uso do Devin (agente de IA).
+
+## Competências
+
+Python, PySpark (Apache Spark), SQL, SAS, Databricks, Microsoft Azure, Apache Hive, Kedro, ETL/ELT, Jenkins, GitHub Actions, Control-M, Git, governança e qualidade de dados. Base em desenvolvimento web (JavaScript, PHP, Laravel, Java).
+
+## Links
+
+- [Site do currículo](https://rodrigowolfgang47.github.io/)
+- [Currículo em PDF](https://rodrigowolfgang47.github.io/Rodrigo-Costa-Engenheiro-de-Dados.pdf)
+- [GitHub](https://github.com/rodrigowolfgang47)
+- Contato: rodrigocosta47@outlook.com · (11) 94871-9660
