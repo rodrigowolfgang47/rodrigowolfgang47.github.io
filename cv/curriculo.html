@@ -16,7 +16,7 @@
 :root{--ink:#141414;--muted:#4f4f4a;--line:#e2e0d8;--soft:#faf9f5;--y:#f5c518;--y-text:#8a6a00;--y-soft:#fdf3c7}
 *{box-sizing:border-box}
 html,body{margin:0;background:#fff}
-body{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.38;
+body{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;color:var(--ink);font-size:9.2pt;line-height:1.36;
   font-variant-ligatures:none;font-feature-settings:"liga" 0,"clig" 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 h1,h2,h3{margin:0;font-family:"Space Grotesk","Segoe UI",Arial,sans-serif;font-variant-ligatures:none}
 p{margin:0}
@@ -49,8 +49,8 @@ h1{font-size:22pt;font-weight:700;letter-spacing:-.015em;line-height:1.05}
 .stat span{font-size:7.8pt;color:var(--muted);line-height:1.25}
 
 /* Seções */
-section{margin-top:10px}
-h2{display:flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;break-after:avoid}
+section{margin-top:17px}
+h2{display:flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;break-after:avoid}
 h2 .tile{width:22px;height:22px;border-radius:6px}
 h2 .tile .i{width:12px;height:12px}
 h2::after{content:"";flex:1;height:1px;background:var(--line);margin-left:4px}
@@ -61,11 +61,11 @@ section:not(:has(.job)){break-inside:avoid}
 /* Competências em caixas com etiquetas */
 .skills{display:grid;grid-template-columns:1fr 1fr;gap:9px 22px}
 .sk{break-inside:avoid}
-.sk h3{display:flex;align-items:center;gap:7px;font-size:9.4pt;font-weight:600;margin-bottom:6px}
+.sk h3{display:flex;align-items:center;gap:7px;font-size:9.4pt;font-weight:600;margin-bottom:7px}
 .sk h3 .tile{width:20px;height:20px;border-radius:5px}
 .sk h3 .tile .i{width:11px;height:11px}
-.tags{display:flex;flex-wrap:wrap;gap:4px}
-.tag{font-family:"IBM Plex Mono",Consolas,monospace;font-size:7.8pt;padding:1px 7px;border-radius:5px;border:1px solid var(--line);background:var(--soft);white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+.tag{font-family:"IBM Plex Mono",Consolas,monospace;font-size:7.8pt;padding:2px 8px;border-radius:5px;border:1px solid var(--line);background:var(--soft);white-space:nowrap}
 .tag.main{background:var(--y-soft);border-color:#f0dc8a;color:#5a4500;font-weight:500}
 
 /* Experiência em cartões */
@@ -220,7 +220,7 @@ section:not(:has(.job)){break-inside:avoid}
       </ul>
       <p class="sub">Migração para cloud <span>· 2023 – 2024</span></p>
       <ul>
-        <li>Atuei na linha de frente da migração do legado em SAS para a Microsoft Azure no projeto PDA (detalhes em Projetos entregues).</li>
+        <li>Atuei na linha de frente da migração do legado em SAS para a Azure no projeto PDA (veja Projetos entregues).</li>
         <li>Desenvolvi pipelines ETL em PySpark, SQL, Apache Hive e Kedro, com orquestração e calendarização no Control-M.</li>
         <li>Promovido após a entrega do projeto no fim de 2024, pela contribuição técnica no desenvolvimento.</li>
       </ul>
@@ -272,7 +272,6 @@ section:not(:has(.job)){break-inside:avoid}
         <li>Orquestração e calendarização dos jobs via Control-M.</li>
       </ul>
       <p class="result"><svg class="i"><use href="#award"/></svg><span><b>Resultado:</b> projeto entregue em produção e promoção pela atuação no desenvolvimento.</span></p>
-      <div class="tags">Tecnologias: <span class="tag">SAS</span> <span class="tag">Azure</span> <span class="tag">Databricks</span> <span class="tag">PySpark</span> <span class="tag">Control-M</span> <span class="tag">Camadas bronze e silver</span></div>
     </div>
   </div>
 </section>
@@ -293,7 +292,7 @@ section:not(:has(.job)){break-inside:avoid}
     <div class="item"><span class="tile"><svg class="i"><use href="#layout"/></svg></span><div><b>Front-end Coding (intensivo)</b><span>Digital House · 2020</span></div></div>
     <div class="item"><span class="tile"><svg class="i"><use href="#code"/></svg></span><div><b>JavaScript Avançado</b><span>Udemy e Alura · 2020 – 2022</span></div></div>
     <div class="item"><span class="tile"><svg class="i"><use href="#code"/></svg></span><div><b>Laravel (PHP)</b><span>Udemy · 2022</span></div></div>
-    <div class="item"><span class="tile"><svg class="i"><use href="#zap"/></svg></span><div><b>Next Level Week (NLW): Node.js e React</b><span>Rocketseat · 2023</span></div></div>
+    <div class="item"><span class="tile"><svg class="i"><use href="#zap"/></svg></span><div><b>Next Level Week: Node.js e React</b><span>Rocketseat · 2023</span></div></div>
   </div>
 </section>
 
