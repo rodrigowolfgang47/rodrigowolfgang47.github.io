@@ -49,8 +49,8 @@ h1{font-size:22pt;font-weight:700;letter-spacing:-.015em;line-height:1.05}
 .stat span{font-size:7.8pt;color:var(--muted);line-height:1.25}
 
 /* Seções */
-section{margin-top:11px}
-h2{display:flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;break-after:avoid}
+section{margin-top:10px}
+h2{display:flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;break-after:avoid}
 h2 .tile{width:22px;height:22px;border-radius:6px}
 h2 .tile .i{width:12px;height:12px}
 h2::after{content:"";flex:1;height:1px;background:var(--line);margin-left:4px}
@@ -73,7 +73,8 @@ section:not(:has(.job)){break-inside:avoid}
 .job{padding:10px 0 0;margin-top:10px;border-top:1px solid var(--line);break-inside:avoid;display:grid;grid-template-columns:auto 1fr;gap:0 11px}
 .job.featured,.proj{margin-top:0;border:1px solid #e9d58a;border-radius:9px;padding:10px 12px;box-shadow:inset 3px 0 0 var(--y)}
 .featured + .job{border-top:0;padding-top:4px}
-.job.featured{break-inside:auto}
+.job.featured{break-inside:auto;display:block;position:relative;padding-left:51px}
+.job.featured > .tile{position:absolute;left:12px;top:10px}
 .job.featured ul,.job.featured .job-h,.job.featured .co,.job.featured .sub{break-inside:avoid}
 .sub{break-after:avoid}
 .sub{font-weight:600;font-size:9.2pt;margin:6px 0 1px}
@@ -113,6 +114,14 @@ section:not(:has(.job)){break-inside:avoid}
 .item div span{display:block;color:var(--muted);font-size:8.3pt}
 .lang{display:flex;gap:7px}
 .lang .item{flex:1}
+
+/* Mais leve: mais espaço entre colunas e ícones vazados nos subtítulos
+   (quadrado preto só nos títulos de seção, números do topo e cartões em destaque) */
+.skills{gap:10px 36px}
+.grid2{gap:8px 28px}
+.grid3{gap:8px 22px}
+.sk h3 .tile,.item .tile,.job:not(.featured) > .tile{background:transparent;color:#9a7400;border:1.3px solid #e3cf86}
+.sk h3 .tile .i,.item .tile .i,.job:not(.featured) > .tile .i{stroke-width:1.8}
 .kw{font-size:8.6pt;color:#33332e;line-height:1.6}
 </style>
 </head>
@@ -284,7 +293,7 @@ section:not(:has(.job)){break-inside:avoid}
     <div class="item"><span class="tile"><svg class="i"><use href="#layout"/></svg></span><div><b>Front-end Coding (intensivo)</b><span>Digital House · 2020</span></div></div>
     <div class="item"><span class="tile"><svg class="i"><use href="#code"/></svg></span><div><b>JavaScript Avançado</b><span>Udemy e Alura · 2020 – 2022</span></div></div>
     <div class="item"><span class="tile"><svg class="i"><use href="#code"/></svg></span><div><b>Laravel (PHP)</b><span>Udemy · 2022</span></div></div>
-    <div class="item"><span class="tile"><svg class="i"><use href="#zap"/></svg></span><div><b>Next Level Week: Node.js e React</b><span>Rocketseat · 2023</span></div></div>
+    <div class="item"><span class="tile"><svg class="i"><use href="#zap"/></svg></span><div><b>Next Level Week (NLW): Node.js e React</b><span>Rocketseat · 2023</span></div></div>
   </div>
 </section>
 
