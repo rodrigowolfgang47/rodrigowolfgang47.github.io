@@ -135,7 +135,20 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke
 .nav a:hover{color:var(--fg);background:var(--paper)}
 .theme-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;border:1px solid var(--line);
   background:var(--paper);color:var(--accent-text);cursor:pointer;flex:none}
-.theme-btn:hover{border-color:var(--accent)}
+.theme-btn:hover,.menu-btn:hover{border-color:var(--accent)}
+/* Menu hambúrguer (mobile) */
+.menu-btn{display:none;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;border:1px solid var(--line);
+  background:var(--paper);color:var(--accent-text);cursor:pointer;flex:none;margin-left:auto}
+.menu-btn .ic-close{display:none}
+.menu-btn[aria-expanded="true"] .ic-open{display:none}
+.menu-btn[aria-expanded="true"] .ic-close{display:block}
+.mnav{max-width:1040px;margin:0 auto;padding:4px max(16px,env(safe-area-inset-left,0px)) 14px;display:grid;gap:2px;border-top:1px solid var(--line);animation:drop .22s ease}
+.mnav[hidden]{display:none}
+.mnav a{display:flex;align-items:center;gap:12px;padding:12px 10px;border-radius:8px;color:var(--fg);text-decoration:none;font-weight:500;font-size:15.5px}
+.mnav a svg{color:var(--accent-text)}
+.mnav a:hover,.mnav a:focus-visible{background:var(--paper)}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}}
+@media (min-width:861px){.mnav{display:none!important}}
 :root[data-theme="dark"] .ic-sun{display:block} :root[data-theme="dark"] .ic-moon{display:none}
 :root[data-theme="light"] .ic-sun{display:none} :root[data-theme="light"] .ic-moon{display:block}
 
@@ -274,7 +287,11 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
   .rd-series{transform:scale(1)}
 }
 
-@media (max-width:860px){.radar-wrap{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:1fr}.nav{display:none}}
+.radar-wrap>.roles{display:flex;flex-direction:column}
+#roleBtns{flex:1}
+#roleBtns .role-btn{flex:1}
+
+@media (max-width:860px){.menu-btn{display:inline-flex}.radar-wrap{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:1fr}.nav{display:none}}
 @media (max-width:620px){
   .hero{grid-template-columns:1fr;gap:18px;padding-top:32px}
   .avatar{width:80px;height:80px;font-size:32px;border-radius:16px}
@@ -336,6 +353,8 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
   <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
   <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
 </svg>
 
@@ -345,10 +364,22 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
     <nav class="nav" aria-label="Seções">
       <a href="#sobre">Sobre</a><a href="#perfil">Perfil</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav">
+      <svg class="i ic-open"><use href="#i-menu"/></svg><svg class="i ic-close"><use href="#i-x"/></svg>
+    </button>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
       <svg class="i ic-sun"><use href="#i-sun"/></svg><svg class="i ic-moon"><use href="#i-moon"/></svg>
     </button>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Menu" hidden>
+    <a href="#inicio"><svg class="i"><use href="#i-user"/></svg>Início</a>
+    <a href="#sobre"><svg class="i"><use href="#i-book"/></svg>Sobre</a>
+    <a href="#perfil"><svg class="i"><use href="#i-target"/></svg>Perfil em dados</a>
+    <a href="#experiencia"><svg class="i"><use href="#i-briefcase"/></svg>Experiência</a>
+    <a href="#competencias"><svg class="i"><use href="#i-zap"/></svg>Competências</a>
+    <a href="#formacao"><svg class="i"><use href="#i-cap"/></svg>Formação</a>
+    <a href="#contato"><svg class="i"><use href="#i-send"/></svg>Contato</a>
+  </nav>
 </header>
 
 <main class="wrap" id="inicio">
@@ -537,6 +568,26 @@ footer{color:var(--muted);font-size:13px;display:flex;justify-content:space-betw
     root.setAttribute('data-theme', next);
     try { localStorage.setItem('tema', next); } catch (e) {}
   });
+
+  /* Menu hambúrguer */
+  (function () {
+    var btn = document.getElementById('menuBtn'), nav = document.getElementById('mnav');
+    function setOpen(open) {
+      nav.hidden = !open;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
+    btn.addEventListener('click', function () { setOpen(nav.hidden); });
+    nav.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return;
+      e.preventDefault(); setOpen(false);
+      var id = a.getAttribute('href'), t = document.querySelector(id);
+      if (t) t.scrollIntoView({ behavior: REDUCE ? 'auto' : 'smooth', block: 'start' });
+      try { history.replaceState(null, '', id); } catch (err) {}
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !nav.hidden) { setOpen(false); btn.focus(); } });
+    document.addEventListener('click', function (e) { if (!nav.hidden && !e.target.closest('.top')) setOpen(false); });
+  })();
 
   var REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var NS = 'http://www.w3.org/2000/svg';
